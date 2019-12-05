@@ -19,7 +19,6 @@ const App: () => React$Node = () => {
     <>
       <SafeAreaView>
         <ScrollView
-
           contentInsetAdjustmentBehavior="automatic">
           <Home />
         </ScrollView>
