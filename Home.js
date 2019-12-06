@@ -47,15 +47,15 @@ class Home extends Component {
   }
 
   // TODO
-  // HTML to TEXT
   // UX
   // Navigation to more page
   // Info button on Flag
+  // push notifications
 
   render() {
     const { loading, data, error } = this.state;
     return (
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <View style={styles.page}>
         <Fragment>
             {error ? <Text>An unexpected error has occurred</Text> : null}
         </Fragment>
@@ -72,7 +72,12 @@ class Home extends Component {
 }
 
 const styles = StyleSheet.create({
-
+  page: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: '#eee8aa',
+  },
 });
 
 export default Home;
