@@ -1,9 +1,15 @@
 import React, { Component, Fragment } from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableHighlight } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 class History extends Component {
+
+  constructor(props) {
+    super(props);
+    console.log(props.navigation);
+    this.state = { navigation: props.navigate };
+  }
 
   _getRecentImg() {
     return (
@@ -19,13 +25,7 @@ class History extends Component {
 
   render() {
     const recentUpdates = this.props.items;
-    /*
-                {item.long.split('<br/>').map(line => (
-                    <Text>
-                        {line}
-                    </Text>
-                ))}
-    */
+    const {navigate} = this.props.navigation;
     return (
     <View style={styles.container}>
         <View style={styles.headerContainer}>
@@ -33,6 +33,7 @@ class History extends Component {
             <Text style={styles.sectionHeader}>Recent Status Alerts</Text>
         </View>
         {recentUpdates.map(item => (
+          <TouchableHighlight onPress={() => navigate('FlagStatus', {})} underlayColor="#87ceeb">
             <View style={styles.rowContainer}>
                 <View style={styles.itemContainer}>
                     <View style={{ flexDirection: 'row', paddingBottom: 10 }}>
@@ -42,6 +43,7 @@ class History extends Component {
                 </View>
                 <Icon name="chevron-right" size={15} style={styles.chevron} />
             </View>
+          </TouchableHighlight>
          ))
          }
     </View>

@@ -7,24 +7,31 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-} from 'react-native';
+
+import {createAppContainer} from 'react-navigation';
+import {createStackNavigator} from 'react-navigation-stack';
 
 import Home from './Home';
+import FlagStatus from './FlagStatus';
 
-const App: () => React$Node = () => {
-  return (
-    <>
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic">
-          <Home />
-        </ScrollView>
-      </SafeAreaView>
-    </>
-  );
-};
+const MainNavigator = createStackNavigator({
+  Home: {
+    screen: Home,
+    navigationOptions: {
+        header: null,
+    },
+  },
+  FlagStatus: {
+    screen: FlagStatus,
+    navigationOptions: {
+        header: null,
+    },
+  },
+},
+  {
+    initialRouteName: 'Home',
+  });
+
+const App = createAppContainer(MainNavigator);
 
 export default App;

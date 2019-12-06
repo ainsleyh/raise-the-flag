@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
+import { SafeAreaView, ScrollView, Text, View, StyleSheet, Image } from 'react-native';
 
 import History from './History';
 import Today from './Today';
@@ -39,19 +39,21 @@ class Home extends Component {
 
   _getHistoryItems = data => {
     return (
-        <History items={data.slice(0,20)} />
+        <History items={data.slice(0,20)} navigation={this.props.navigation} />
     );
   }
 
   // TODO
   // UX
-  // Navigation to more page
   // Info button on Flag
   // push notifications
 
   render() {
     const { loading, data, error } = this.state;
     return (
+    <SafeAreaView>
+     <ScrollView
+      contentInsetAdjustmentBehavior="automatic">
       <View style={styles.page}>
         <Fragment>
             {error ? <Text>An unexpected error has occurred</Text> : null}
@@ -64,6 +66,8 @@ class Home extends Component {
             {data != null ? this._getHistoryItems(data) : null}
         </Fragment>
       </View>
+     </ScrollView>
+     </SafeAreaView>
     );
   }
 }
