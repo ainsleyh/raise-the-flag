@@ -5,7 +5,7 @@ class Today extends Component {
 
   _getFlagImg() {
     return (
-    <View style={{ }}>
+    <View>
         <Image
             resizeMode={'cover'}
             style={{ width: 75, height: 50 }}

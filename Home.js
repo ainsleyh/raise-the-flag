@@ -39,10 +39,7 @@ class Home extends Component {
 
   _getHistoryItems = data => {
     return (
-        <>
-            <Text>Recent Updates</Text>
-            <History items={data.slice(0,10)} />
-        </>
+        <History items={data.slice(0,20)} />
     );
   }
 
@@ -76,7 +73,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: '#eee8aa',
+    backgroundColor: '#87ceeb',
   },
 });
 
