@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Text, View, StyleSheet, Image, Dimensions } from 'react-native';
+import { Text, View, StyleSheet, Image } from 'react-native';
 
 class Today extends Component {
 
@@ -19,7 +19,8 @@ class Today extends Component {
 
   _getStatus(data) {
     const endDate = new Date(data.end);
-    const todaysDate = new Date(Date.now());
+    const todaysDate = new Date(new Date().getFullYear(),new Date().getMonth() , new Date().getDate());
+
     const isHalfStaff = endDate >= todaysDate ? true : false;
 
     if (isHalfStaff) {

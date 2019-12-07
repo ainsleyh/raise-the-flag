@@ -33,7 +33,7 @@ class History extends Component {
             <Text style={styles.sectionHeader}>Recent Status Alerts</Text>
         </View>
         {recentUpdates.map(item => (
-          <TouchableHighlight onPress={() => navigate('FlagStatus', {})} underlayColor="#87ceeb">
+          <TouchableHighlight onPress={() => navigate('FlagStatus', { item: item })} underlayColor="#87ceeb">
             <View style={styles.rowContainer}>
                 <View style={styles.itemContainer}>
                     <View style={{ flexDirection: 'row', paddingBottom: 10 }}>
