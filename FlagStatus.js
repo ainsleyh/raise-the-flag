@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import { Text, View, StyleSheet, Image, ScrollView } from 'react-native';
 
 class FlagStatus extends Component {
+  static navigationOptions = {
+    title: 'RaiseTheFlag',
+    headerStyle: {
+        backgroundColor: '#4169e1',
+    },
+    headerTintColor: '#FFFFFF',
+  };
 
   _getFlagIcon() {
     return (
@@ -90,6 +97,7 @@ const styles = StyleSheet.create({
     fontFamily: 'sans-serif-condensed',
   },
   line: {
+
   },
 });
 

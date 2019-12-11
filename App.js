@@ -10,28 +10,57 @@ import React from 'react';
 
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
+import {createBottomTabNavigator} from 'react-navigation-tabs';
+
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 import Home from './Home';
 import FlagStatus from './FlagStatus';
+import FlagCode from './FlagCode';
 
-const MainNavigator = createStackNavigator({
-  Home: {
-    screen: Home,
+const HomeStack = createStackNavigator(
+  {
+    Home: { screen: Home },
+    FlagStatus: { screen: FlagStatus },
+  },
+  {
     navigationOptions: {
-        header: null,
+      tabBarLabel: 'Home!',
+      showIcon: true,
+      tabBarIcon: ({ focused, tintColor }) => {
+        return <Icon name="home" size={25} color={tintColor} />;
+      },
+    },
+  }
+);
+
+const HistoryStack = createStackNavigator(
+  {
+    History: {
+        screen: FlagCode,
     },
   },
-  FlagStatus: {
-    screen: FlagStatus,
+  {
     navigationOptions: {
-        header: null,
+      title: 'History & Etiquette',
+      showIcon: true,
+      tabBarIcon: ({ focused, tintColor }) => {
+        return <Icon name="flag-o" size={25} color={tintColor} />;
+      },
     },
+  }
+);
+
+const bottomTabNavigator = createBottomTabNavigator(
+  {
+    Home: { screen: HomeStack, },
+    History: { screen: HistoryStack, },
   },
-},
   {
     initialRouteName: 'Home',
-  });
+  }
+);
 
-const App = createAppContainer(MainNavigator);
+const App = createAppContainer(bottomTabNavigator);
 
 export default App;

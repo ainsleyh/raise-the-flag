@@ -6,6 +6,13 @@ import Today from './Today';
 import Loading from './Loading';
 
 class Home extends Component {
+  static navigationOptions = {
+    title: 'RaiseTheFlag',
+    headerStyle: {
+        backgroundColor: '#4169e1',
+    },
+    headerTintColor: '#FFFFFF',
+  };
 
   constructor(props) {
     super(props);

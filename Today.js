@@ -75,8 +75,9 @@ const styles = StyleSheet.create({
   cardContainer: {
     padding: 20,
     backgroundColor: 'white',
-    borderRadius: 15,
-    margin: 12,
+    borderRadius: 5,
+    marginTop: 10,
+    marginBottom: 10,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -85,8 +86,8 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     borderRadius: 2,
     padding: 15,
-    marginLeft: -25,
-    marginRight: -25,
+    marginLeft: -20,
+    marginRight: -20,
     backgroundColor: '#4169e1',
   },
   date: {
