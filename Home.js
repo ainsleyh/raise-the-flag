@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { SafeAreaView, ScrollView, Text, View, StyleSheet, Image } from 'react-native';
+import { SafeAreaView, ScrollView, RefreshControl, Text, View, StyleSheet, Image } from 'react-native';
 
 import History from './History';
 import Today from './Today';
@@ -16,17 +16,18 @@ class Home extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { loading:true };
+    this.state = { loading:true, data: null, error: false };
   }
 
-  componentDidMount() {
+  _refresh = () => {
+    this.setState({ loading: true, data: null, error: false });
     const url = 'http://api.fatherstorm.com/flag.php?long=true';
     fetch(url)
           .then(data => {return data.json();})
           .then(json => {
             setTimeout(() => {
                 console.log('success');
-                            this.setState({ loading: false, data: json });
+                this.setState({ loading: false, data: json });
              }, 2000);
           })
           .catch(error => {
@@ -34,6 +35,10 @@ class Home extends Component {
             console.log(error);
             this.setState({ loading: false, error: true });
           });
+  }
+
+  componentDidMount() {
+    this._refresh();
   }
 
   _getTodayStatus = mostRecentStatus => {
@@ -59,7 +64,10 @@ class Home extends Component {
     return (
     <SafeAreaView>
      <ScrollView
-      contentInsetAdjustmentBehavior="automatic">
+        refreshControl={
+          <RefreshControl refreshing={loading} onRefresh={this._refresh} />
+        }
+        contentInsetAdjustmentBehavior="automatic">
       <View style={styles.page}>
         <Fragment>
             {error ? <Text>An unexpected error has occurred</Text> : null}

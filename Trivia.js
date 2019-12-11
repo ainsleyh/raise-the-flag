@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, Image, ScrollView } from 'react-native';
 
-class FlagCode extends Component {
+class Trivia extends Component {
   static navigationOptions = {
-    title: 'US Flag History and Etiquette',
+    title: 'US Flag Trivia',
     headerStyle: {
         backgroundColor: '#4169e1',
     },
@@ -13,12 +13,8 @@ class FlagCode extends Component {
   render() {
     return (
     <View style={styles.page}>
-     <ScrollView>
-        <View style={styles.contentContainer}>
-            <Text>Etiquette here</Text>
-        </View>
-     </ScrollView>
-     </View>
+        <Text>trivia here</Text>
+    </View>
     );
   }
 }
@@ -26,4 +22,4 @@ class FlagCode extends Component {
 const styles = StyleSheet.create({
 });
 
-export default FlagCode;
+export default Trivia;
