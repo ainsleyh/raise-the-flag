@@ -38,10 +38,9 @@ class Loading extends Component {
 
   render() {
     const screenHeight = Math.round(Dimensions.get('window').height);
-    console.log(screenHeight);
      const num =  this.state.value.interpolate({
                       inputRange: [0,1],
-                      outputRange: [0, 500]
+                      outputRange: [-100, 375]
                     });
     return (
         <View style={{

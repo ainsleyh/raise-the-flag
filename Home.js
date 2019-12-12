@@ -56,7 +56,6 @@ class Home extends Component {
   }
 
   // TODO
-  // Info button on Flag
   // push notifications
 
   render() {
