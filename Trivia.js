@@ -3,6 +3,8 @@ import { Text, View, StyleSheet, TouchableHighlight } from 'react-native';
 
 import { generateTrivia } from './QuestionGenerator';
 
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 class Trivia extends Component {
   static navigationOptions = {
     title: 'US Flag Trivia',
@@ -28,16 +30,9 @@ class Trivia extends Component {
   // fisher-yates shuffle
   _shuffle(array) {
       let counter = array.length;
-
-      // While there are elements in the array
       while (counter > 0) {
-          // Pick a random index
           let index = Math.floor(Math.random() * counter);
-
-          // Decrease counter by 1
           counter--;
-
-          // And swap the last element with it
           let temp = array[counter];
           array[counter] = array[index];
           array[index] = temp;
@@ -53,27 +48,25 @@ class Trivia extends Component {
       <View>
         <Text style={styles.question}>{trivia.question}</Text>
         {shuffledAnswers.map(answer => (
-          <TouchableHighlight onPress={() => this._answerSelected(answer)} underlayColor="#87ceeb">
-            <View>
+            <View style={styles.answerContainer}>
+              <TouchableHighlight onPress={() => this._answerSelected(answer)} underlayColor="#87ceeb">
                 <Text style={styles.answer}>{answer}</Text>
+              </TouchableHighlight>
             </View>
-          </TouchableHighlight>
          ))
          }
       </View>);
   }
 
   _getResultComponent = () => {
-    console.log(this.state.selected);
-    console.log(this.state.trivia.answers[this.state.trivia.answerIndex]);
     const isCorrect = this.state.selected == this.state.trivia.answers[this.state.trivia.answerIndex];
     return (
       <View>
-        <Text style={styles.result}>{isCorrect ? 'Correct!' : 'Wrong!'}</Text>
+        <Text style={styles.answer}>{isCorrect ? 'Correct!' : 'Wrong!'}</Text>
         <Text style={styles.question}>{this.state.trivia.followup}</Text>
-        <TouchableHighlight onPress={() => this._reset()} underlayColor="#87ceeb">
-            <View>
-                <Text style={styles.answer}>Reset</Text>
+        <TouchableHighlight onPress={() => this._reset()}>
+            <View style={styles.arrowContainer}>
+                <Icon name="arrow-right" size={25} style={styles.chevron} />
             </View>
         </TouchableHighlight>
       </View>);
@@ -94,7 +87,7 @@ class Trivia extends Component {
 const styles = StyleSheet.create({
   outer: {
     flex: 1,
-    backgroundColor: '#4169e1',
+    backgroundColor: '#d3d3d3', //'#4169e1',
     justifyContent: 'center',
   },
   page: {
@@ -103,7 +96,12 @@ const styles = StyleSheet.create({
     marginRight: 10,
     padding: 15,
     borderRadius: 3,
-
+    borderColor: '#4169e1',
+    borderWidth: 4,
+  },
+  arrowContainer: {
+    alignItems: 'flex-end',
+    alignSelf: 'stretch',
   },
   question: {
     fontSize: 36,
@@ -113,11 +111,17 @@ const styles = StyleSheet.create({
     fontFamily: 'sans-serif-condensed',
     color: 'crimson',
   },
+  answerContainer: {
+    borderTopColor: 'black',
+    borderTopWidth: 1,
+    alignSelf: 'stretch',
+    marginLeft: -15,
+    marginRight: -15,
+  },
   answer: {
     fontSize: 24,
     fontWeight: '800',
-    paddingTop: 12,
-    paddingBottom: 12,
+    padding: 15,
     fontFamily: 'sans-serif-condensed',
   },
 });
