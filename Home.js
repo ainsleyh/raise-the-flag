@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: '#d3d3d3', //'#87ceeb',
+    backgroundColor: '#d3d3d3',
   },
 });
 

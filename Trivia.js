@@ -61,15 +61,15 @@ class Trivia extends Component {
   _getResultComponent = () => {
     const isCorrect = this.state.selected == this.state.trivia.answers[this.state.trivia.answerIndex];
     return (
+    <TouchableHighlight onPress={() => this._reset()} underlayColor="#87ceeb">
       <View>
         <Text style={styles.answer}>{isCorrect ? 'Correct!' : 'Wrong!'}</Text>
         <Text style={styles.question}>{this.state.trivia.followup}</Text>
-        <TouchableHighlight onPress={() => this._reset()}>
             <View style={styles.arrowContainer}>
                 <Icon name="arrow-right" size={25} style={styles.chevron} />
             </View>
-        </TouchableHighlight>
-      </View>);
+      </View>
+    </TouchableHighlight>);
   }
 
   render() {
@@ -113,15 +113,15 @@ const styles = StyleSheet.create({
   },
   answerContainer: {
     borderTopColor: 'black',
-    borderTopWidth: 1,
+    borderWidth: 1,
+    borderRadius: 8,
+    marginTop: 8,
     alignSelf: 'stretch',
-    marginLeft: -15,
-    marginRight: -15,
   },
   answer: {
     fontSize: 24,
     fontWeight: '800',
-    padding: 15,
+    padding: 8,
     fontFamily: 'sans-serif-condensed',
   },
 });
