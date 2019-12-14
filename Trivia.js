@@ -47,8 +47,8 @@ class Trivia extends Component {
     return (
       <View>
         <Text style={styles.question}>{trivia.question}</Text>
-        {shuffledAnswers.map(answer => (
-            <View style={styles.answerContainer}>
+        {shuffledAnswers.map((answer, i) => (
+            <View style={styles.answerContainer} key={i}>
               <TouchableHighlight onPress={() => this._answerSelected(answer)} underlayColor="#87ceeb">
                 <Text style={styles.answer}>{answer}</Text>
               </TouchableHighlight>

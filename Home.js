@@ -55,9 +55,6 @@ class Home extends Component {
     );
   }
 
-  // TODO
-  // push notifications
-
   render() {
     const { loading, data, error } = this.state;
     return (

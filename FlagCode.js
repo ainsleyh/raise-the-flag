@@ -45,9 +45,9 @@ class FlagCode extends Component {
                 <Text style={styles.header}>{"12 Rules of the American Flag Etiquette"}</Text>
             </View>
             <View>
-                {flagRules.map((rule) => {
+                {flagRules.map((rule, i) => {
                     return (
-                    <Text style={styles.content}>
+                    <Text style={styles.content} key={i}>
                       {rule}
                     </Text>
                     );

@@ -41,8 +41,8 @@ class FlagStatus extends Component {
           <Text style={styles.date}>
             <Text>{"From " + data.start + " until " + data.end}</Text>
           </Text>
-          {data.long.split('<br/>').map(line => (
-            <Text style={styles.line}>
+          {data.long.split('<br/>').map((line, i) => (
+            <Text style={styles.line} key={i}>
                 {line}
             </Text>
           ))}
