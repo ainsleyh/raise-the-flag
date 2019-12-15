@@ -21,20 +21,17 @@ class Home extends Component {
 
   _refresh = () => {
     this.setState({ loading: true, data: null, error: false });
-    const url = 'http://api.fatherstorm.com/flag.php?long=true';
-    fetch(url)
-          .then(data => {return data.json();})
-          .then(json => {
-            setTimeout(() => {
-                console.log('success');
+    const url = 'https://api.fatherstorm.com/flag.php?long=true';
+    setTimeout(() => {
+        fetch(url)
+              .then(data => {return data.json();})
+              .then(json => {
                 this.setState({ loading: false, data: json });
-             }, 2000);
-          })
-          .catch(error => {
-            console.log('fail');
-            console.log(error);
-            this.setState({ loading: false, error: true });
-          });
+              })
+              .catch(error => {
+                this.setState({ loading: false, error: true });
+              });
+    }, 2000);
   }
 
   componentDidMount() {
