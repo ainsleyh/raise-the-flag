@@ -81,20 +81,20 @@ const styles = StyleSheet.create({
   alertHeader: {
     fontSize: 24,
     padding: 6,
-    fontFamily: 'sans-serif-condensed',
+    //fontFamily: 'sans-serif-condensed',
   },
   date: {
     fontSize: 20,
     fontWeight: '800',
     paddingTop: 12,
     paddingBottom: 12,
-    fontFamily: 'sans-serif-condensed',
+    //fontFamily: 'sans-serif-condensed',
   },
   title: {
     fontSize: 24,
     fontWeight: '800',
     paddingTop: 24,
-    fontFamily: 'sans-serif-condensed',
+    //fontFamily: 'sans-serif-condensed',
   },
   line: {
 

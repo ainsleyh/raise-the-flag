@@ -87,7 +87,7 @@ class Trivia extends Component {
 const styles = StyleSheet.create({
   outer: {
     flex: 1,
-    backgroundColor: '#d3d3d3', //'#4169e1',
+    backgroundColor: '#d3d3d3',
     justifyContent: 'center',
   },
   page: {
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     paddingTop: 12,
     paddingBottom: 12,
-    fontFamily: 'sans-serif-condensed',
+    //fontFamily: 'sans-serif-condensed',
     color: 'crimson',
   },
   answerContainer: {
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: '800',
     padding: 8,
-    fontFamily: 'sans-serif-condensed',
+    //fontFamily: 'sans-serif-condensed',
   },
 });
 

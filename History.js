@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
         fontSize: 28,
         //fontWeight: '800',
         padding: 12,
-        fontFamily: 'sans-serif-condensed',
+        //fontFamily: 'sans-serif-condensed',
     },
     itemContainer: {
         padding: 10,

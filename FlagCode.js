@@ -81,12 +81,12 @@ const styles = StyleSheet.create({
     color: 'crimson',
     paddingTop: 24,
     paddingBottom: 10,
-    fontFamily: 'sans-serif-condensed',
+    //fontFamily: 'sans-serif-condensed',
   },
   content: {
     fontSize: 18,
     paddingTop: 12,
-    fontFamily: 'sans-serif-condensed',
+    //fontFamily: 'sans-serif-condensed',
   },
 });
 
