@@ -58,7 +58,7 @@ class Home extends Component {
     <SafeAreaView>
      <ScrollView
         refreshControl={
-          <RefreshControl refreshing={loading} onRefresh={this._refresh} />
+          <RefreshControl refreshing={false} onRefresh={this._refresh} />
         }
         contentInsetAdjustmentBehavior="automatic">
       <View style={styles.page}>
