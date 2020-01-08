@@ -79,6 +79,66 @@
       answers: ['loyalty', 'royalty', 'honor'],
       followup: 'History states that red, white and blue were chosen as the colors to represent valor (red), liberty and purity (white), and justice and loyalty (blue).',
     },
+    {
+      question: 'Who is said to have made the first American flag?',
+      answerIndex: 0,
+      answers: ['Betsy Ross', 'Martha Washington', 'Martha Stewart', 'Betty Crocker'],
+      followup: 'Although she purportedly sewed the first flag in 1776, Ross wasn\'t credited with this work during her lifetime.',
+    },
+    {
+      question: 'The exact proportions of the flag arrangements of stars were not officially declared until a presidential order in ______?',
+      answerIndex: 2,
+      answers: ['1817', '1888', '1912', '1954'],
+      followup: 'Executive Order of President Taft dated June 24, 1912 - established proportions of the flag and provided for arrangement of the stars in six horizontal rows of eight each, a single point of each star to be upward.',
+    },
+    {
+      question: 'Which officials are allowed to order the flag to be flown at half staff at government buildings?',
+      answerIndex: 3,
+      answers: ['President', 'Mayor', 'Governor', 'President and Governor'],
+      followup: 'According to the Flag Code, only the President of the United States, your state\'s Governor, and the Mayor of the District of Columbia can order the US flag lowered to half-staff.',
+    },
+    {
+      question: 'According to the U.S. Flag Code, which is the preferred way to take care of a flag that is tattered and no longer usable?',
+      answerIndex: 2,
+      answers: ['Recycle it', 'Bury it', 'Burn it', 'Send to State Capitol'],
+      followup: 'The United States Flag Code (4 USC Sec 8 Para (k) Amended 7 July 1976) states: "The Flag, when it is in such condition that it is no longer a fitting emblem of display, should be destroyed in a dignified way, preferably by burning.',
+    },
+    {
+      question: 'What is the reason for National Flag Day?',
+      answerIndex: 0,
+      answers: ['To accommodate the adoption of the U.S. Flag in 1777.', 'To commemorate the birthday of Betsy Ross.', 'To commemorate the birthday of Francis Scott Key.', 'To commemorate the birthday of George Washington.'],
+      followup: 'On May 30, 1916, President Woodrow Wilson issued a presidential proclamation establishing a national Flag Day on June 14.',
+    },
+    {
+      question: 'What are the penalties for not complying with U.S. Flag Code.',
+      answerIndex: 2,
+      answers: ['Fine', 'Jail', 'No Penalty'],
+      followup: 'The Supreme Court has ruled that politically motivated violations of the Flag Code are protected by the First Amendment. The Flag Code has no provision for enforcement. No fines, no penalties. There is nothing law enforcement can do when the Flag Code is broken.',
+    },
+    {
+      question: 'Which of these is true according to U.S. Flag Code?',
+      answerIndex: 0,
+      answers: ['The flag should be raised briskly and lowered slowly and ceremoniously.', 'The flag should be raised slowly and ceremoniously and lowered briskly.', 'The flag should be raised and lowered at the same tempo.'],
+      followup: 'The flag should be raised briskly and lowered slowly and ceremoniously. Ordinarily it should be displayed only between sunrise and sunset. It should be illuminated if displayed at night.',
+    },
+    {
+      question: 'Which one of these is NOT against the U.S. Flag Code?',
+      answerIndex: 2,
+      answers: ['Using the flag for advertising', 'Using the flag for clothing, bedding, or draperies', 'Using the flag for a flag pin'],
+      followup: 'The flag should never be used for advertising purposes in any manner whatsoever. It should not be embroidered on such articles as cushions or handkerchiefs and the like, printed or otherwise impressed on paper napkins or boxes or anything that is designed for temporary use and discard.',
+    },
+    {
+      question: 'According to the U.S. Flag Code, which of these are NOT in the guidelines?',
+      answerIndex: 2,
+      answers: ['The flag should not be dipped for any person or things except in special naval procedures.', 'The flag should not touch the ground.', 'The flag should never fly at night.'],
+      followup: 'You can keep your flag flying 24-hours if it is properly illuminated during all hours of darkness.',
+    },
+    {
+      question: 'According to the National Flag Code,  which of these are guidelines for those not in military uniform during the playing of the national anthem or the reciting of the Pledge of Allegiance?',
+      answerIndex: 0,
+      answers: ['Stand at attention with hand over heart.', 'Salute throughout', 'Rules are flexible depending on the time and place.'],
+      followup: 'The code states that persons present are expected to stand and face the flag, if there is one. Civilians should stand to attention with right hand over heart, while military personnel in uniform and veterans should salute throughout.',
+    },
   ];
 
   export function generateTrivia() {
