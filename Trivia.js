@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, TouchableHighlight } from 'react-native';
+import { Text, View, StyleSheet, TouchableHighlight, ScrollView } from 'react-native';
 
 import { generateTrivia } from './QuestionGenerator';
 
@@ -75,10 +75,12 @@ class Trivia extends Component {
   render() {
     return (
     <View style={styles.outer}>
-        <View style={styles.page}>
+     <View style={styles.page}>
+       <ScrollView>
             { !this.state.needsReset ? this._getTriviaComponent() : null}
             { this.state.needsReset ? this._getResultComponent() : null}
-        </View>
+       </ScrollView>
+     </View>
     </View>
     );
   }
