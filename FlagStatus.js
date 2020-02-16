@@ -3,10 +3,12 @@ import { Text, View, StyleSheet, Image, ScrollView } from 'react-native';
 
 class FlagStatus extends Component {
   static navigationOptions = {
-    title: 'RaiseTheFlag',
+    title: 'Honor The Flag',
     headerStyle: {
         backgroundColor: '#4169e1',
+        height: 40,
     },
+    headerForceInset: { top: 'never', bottom: 'never' },
     headerTintColor: '#FFFFFF',
   };
 
@@ -55,7 +57,7 @@ class FlagStatus extends Component {
 
 const styles = StyleSheet.create({
   page: {
-    backgroundColor: '#4169e1',
+    backgroundColor: 'white',
     flex: 1,
   },
   contentContainer: {
@@ -84,7 +86,7 @@ const styles = StyleSheet.create({
     //fontFamily: 'sans-serif-condensed',
   },
   date: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: '800',
     paddingTop: 12,
     paddingBottom: 12,

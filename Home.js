@@ -1,16 +1,19 @@
 import React, { Component, Fragment } from 'react';
 import { SafeAreaView, ScrollView, RefreshControl, Text, View, StyleSheet, Image } from 'react-native';
 
+import PushController from './PushController';
 import History from './History';
 import Today from './Today';
 import Loading from './Loading';
 
 class Home extends Component {
   static navigationOptions = {
-    title: 'RaiseTheFlag',
+    title: 'Honor The Flag',
     headerStyle: {
         backgroundColor: '#4169e1',
+        height: 40,
     },
+    headerForceInset: { top: 'never', bottom: 'never' },
     headerTintColor: '#FFFFFF',
   };
 
@@ -34,7 +37,7 @@ class Home extends Component {
     }, 2000);
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     this._refresh();
   }
 
@@ -72,6 +75,7 @@ class Home extends Component {
             {data != null ? this._getTodayStatus(data[0]) : null}
             {data != null ? this._getHistoryItems(data) : null}
         </Fragment>
+        <PushController/>
       </View>
      </ScrollView>
      </SafeAreaView>

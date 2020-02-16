@@ -97,20 +97,20 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
   },
   fullStaffHeader: {
-    fontSize: 32,
+    fontSize: 24,
     fontWeight: '800',
     padding: 12,
     //fontFamily: 'sans-serif-condensed',
   },
   fullStaff: {
-    fontSize: 48,
+    fontSize: 24,
     fontWeight: '800',
     padding: 12,
     //fontFamily: 'sans-serif-condensed',
     color: 'crimson',
   },
   alertHeader: {
-    fontSize: 32,
+    fontSize: 24,
     fontWeight: '800',
     padding: 12,
     //fontFamily: 'sans-serif-condensed',
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
     //fontFamily: 'sans-serif-condensed',
   },
   halfStaffHeader: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: '800',
     paddingTop: 12,
     paddingBottom: 12,

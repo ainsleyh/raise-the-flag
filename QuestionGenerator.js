@@ -89,7 +89,7 @@
       question: 'The exact proportions of the flag arrangements of stars were not officially declared until a presidential order in ______?',
       answerIndex: 2,
       answers: ['1817', '1888', '1912', '1954'],
-      followup: 'Executive Order of President Taft dated June 24, 1912 - established proportions of the flag and provided for arrangement of the stars in six horizontal rows of eight each, a single point of each star to be upward.',
+      followup: 'Executive Order of President Taft dated June 24, 1912 provided arrangement for the stars and stripes.',
     },
     {
       question: 'Which officials are allowed to order the flag to be flown at half staff at government buildings?',
@@ -101,31 +101,25 @@
       question: 'According to the U.S. Flag Code, which is the preferred way to take care of a flag that is tattered and no longer usable?',
       answerIndex: 2,
       answers: ['Recycle it', 'Bury it', 'Burn it', 'Send to State Capitol'],
-      followup: 'The United States Flag Code (4 USC Sec 8 Para (k) Amended 7 July 1976) states: "The Flag, when it is in such condition that it is no longer a fitting emblem of display, should be destroyed in a dignified way, preferably by burning.',
+      followup: 'The United States Flag Code states: "The Flag, when it is in such condition that it is no longer a fitting emblem of display, should be destroyed in a dignified way, preferably by burning.',
     },
     {
-      question: 'What is the reason for National Flag Day?',
+      question: 'National Flag Day was established to commemorate ____',
       answerIndex: 0,
-      answers: ['To accommodate the adoption of the U.S. Flag in 1777.', 'To commemorate the birthday of Betsy Ross.', 'To commemorate the birthday of Francis Scott Key.', 'To commemorate the birthday of George Washington.'],
+      answers: ['The adoption of the U.S. Flag in 1777.', 'The birthday of Francis Scott Key.', 'The birthday of George Washington.'],
       followup: 'On May 30, 1916, President Woodrow Wilson issued a presidential proclamation establishing a national Flag Day on June 14.',
     },
     {
       question: 'What are the penalties for not complying with U.S. Flag Code.',
       answerIndex: 2,
       answers: ['Fine', 'Jail', 'No Penalty'],
-      followup: 'The Supreme Court has ruled that politically motivated violations of the Flag Code are protected by the First Amendment. The Flag Code has no provision for enforcement. No fines, no penalties. There is nothing law enforcement can do when the Flag Code is broken.',
-    },
-    {
-      question: 'Which of these is true according to U.S. Flag Code?',
-      answerIndex: 0,
-      answers: ['The flag should be raised briskly and lowered slowly and ceremoniously.', 'The flag should be raised slowly and ceremoniously and lowered briskly.', 'The flag should be raised and lowered at the same tempo.'],
-      followup: 'The flag should be raised briskly and lowered slowly and ceremoniously. Ordinarily it should be displayed only between sunrise and sunset. It should be illuminated if displayed at night.',
+      followup: 'The Flag Code has no provision for enforcement. No fines, no penalties. There is nothing law enforcement can do when the Flag Code is broken.',
     },
     {
       question: 'Which one of these is NOT against the U.S. Flag Code?',
       answerIndex: 2,
       answers: ['Using the flag for advertising', 'Using the flag for clothing, bedding, or draperies', 'Using the flag for a flag pin'],
-      followup: 'The flag should never be used for advertising purposes in any manner whatsoever. It should not be embroidered on such articles as cushions or handkerchiefs and the like, printed or otherwise impressed on paper napkins or boxes or anything that is designed for temporary use and discard.',
+      followup: 'The flag should never be used for advertising purposes or embroidered on clothing or fabric.',
     },
     {
       question: 'According to the U.S. Flag Code, which of these are NOT in the guidelines?',
@@ -137,7 +131,7 @@
       question: 'According to the National Flag Code,  which of these are guidelines for those not in military uniform during the playing of the national anthem or the reciting of the Pledge of Allegiance?',
       answerIndex: 0,
       answers: ['Stand at attention with hand over heart.', 'Salute throughout', 'Rules are flexible depending on the time and place.'],
-      followup: 'The code states that persons present are expected to stand and face the flag, if there is one. Civilians should stand to attention with right hand over heart, while military personnel in uniform and veterans should salute throughout.',
+      followup: 'The code states that persons present are expected to stand and face the flag with right hand over heart.',
     },
   ];
 

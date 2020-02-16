@@ -10,7 +10,9 @@ class Trivia extends Component {
     title: 'US Flag Trivia',
     headerStyle: {
         backgroundColor: '#4169e1',
+        height: 40,
     },
+    headerForceInset: { top: 'never', bottom: 'never' },
     headerTintColor: '#FFFFFF',
   };
 
@@ -106,7 +108,7 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
   },
   question: {
-    fontSize: 36,
+    fontSize: 20,
     fontWeight: '800',
     paddingTop: 12,
     paddingBottom: 12,
@@ -121,7 +123,7 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
   },
   answer: {
-    fontSize: 24,
+    fontSize: 14,
     fontWeight: '800',
     padding: 8,
     //fontFamily: 'sans-serif-condensed',

@@ -6,7 +6,9 @@ class FlagCode extends Component {
     title: 'US Flag History and Etiquette',
     headerStyle: {
         backgroundColor: '#4169e1',
+        height: 40,
     },
+    headerForceInset: { top: 'never', bottom: 'never' },
     headerTintColor: '#FFFFFF',
   };
 
@@ -62,7 +64,7 @@ class FlagCode extends Component {
 
 const styles = StyleSheet.create({
   page: {
-    backgroundColor: '#4169e1',
+    backgroundColor: 'white',
     flex: 1,
   },
   contentContainer: {
@@ -77,14 +79,14 @@ const styles = StyleSheet.create({
     borderRadius: 2,
   },
   header: {
-    fontSize: 24,
+    fontSize: 20,
     color: 'crimson',
     paddingTop: 24,
     paddingBottom: 10,
     //fontFamily: 'sans-serif-condensed',
   },
   content: {
-    fontSize: 18,
+    fontSize: 14,
     paddingTop: 12,
     //fontFamily: 'sans-serif-condensed',
   },

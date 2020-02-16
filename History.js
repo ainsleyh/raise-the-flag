@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     sectionHeader: {
-        fontSize: 28,
+        fontSize: 24,
         //fontWeight: '800',
         padding: 12,
         //fontFamily: 'sans-serif-condensed',

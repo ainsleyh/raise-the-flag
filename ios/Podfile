@@ -36,7 +36,6 @@ target 'RaiseTheFlag' do
   pod 'Firebase/Analytics'
 
 
-  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
   target 'RaiseTheFlagTests' do
     inherit! :search_paths
